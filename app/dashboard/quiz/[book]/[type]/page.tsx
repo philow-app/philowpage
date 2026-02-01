@@ -2,12 +2,12 @@
 
 import { useParams } from "next/navigation"
 import { useEffect } from "react"
-import VerneConnaissancePage from "../../../verne/connaissance/page"
-import VerneVocabulairePage from "../../../verne/vocabulaire/page"
-import HaushoferConnaissancePage from "../../../haushofer/connaissance/page"
-import HaushoferVocabulairePage from "../../../haushofer/vocabulaire/page"
-import CanguilhemConnaissancePage from "../../../canguilhem/connaissance/page"
-import CanguilhemVocabulairePage from "../../../canguilhem/vocabulaire/page"
+import VerneConnaissancePage from "@/app/dashboard/quiz/verne/connaissance/page"
+import VerneVocabulairePage from "@/app/dashboard/quiz/verne/vocabulaire/page"
+import HaushoferConnaissancePage from "@/app/dashboard/quiz/haushofer/connaissance/page"
+import HaushoferVocabulairePage from "@/app/dashboard/quiz/haushofer/vocabulaire/page"
+import CanguilhemConnaissancePage from "@/app/dashboard/quiz/canguilhem/connaissance/page"
+import CanguilhemVocabulairePage from "@/app/dashboard/quiz/canguilhem/vocabulaire/page"
 
 export default function DynamicQuizPage() {
   const params = useParams()
