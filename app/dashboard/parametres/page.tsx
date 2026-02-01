@@ -22,6 +22,7 @@ export default function ParametresPage() {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [filiere, setFiliere] = useState('')
+  const [user, setUser] = useState<any>(null)
   
   // États pour le changement de mot de passe
   const [currentPassword, setCurrentPassword] = useState('')
@@ -35,15 +36,20 @@ export default function ParametresPage() {
 
   // Charger les données utilisateur au montage
   useEffect(() => {
-    if (user) {
-      console.log('Données utilisateur actuelles:', user)
-      console.log('Métadonnées utilisateur:', user.user_metadata)
-      setFirstName(user.user_metadata?.first_name || '')
-      setLastName(user.user_metadata?.last_name || '')
-      setEmail(user.email || '')
-      setFiliere(user.user_metadata?.filiere || '')
+    const loadUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      setUser(user)
+      if (user) {
+        console.log('Données utilisateur actuelles:', user)
+        console.log('Métadonnées utilisateur:', user.user_metadata)
+        setFirstName(user.user_metadata?.first_name || '')
+        setLastName(user.user_metadata?.last_name || '')
+        setEmail(user.email || '')
+        setFiliere(user.user_metadata?.filiere || '')
+      }
     }
-  }, [user])
+    loadUser()
+  }, [])
 
   const showMessage = (text: string, type: 'success' | 'error' = 'success') => {
     setMessage(text)
