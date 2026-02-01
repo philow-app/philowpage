@@ -261,35 +261,6 @@ export default function ParametresPage() {
               </CardContent>
             </Card>
           </TabsContent>
-        </Tabs>
-                
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
-                  <h3 className="font-semibold text-lg text-gray-900 mb-3">Comment ça marche ?</h3>
-                  <div className="space-y-2 text-sm text-gray-700">
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
-                      <p>Partagez votre code de parrainage ou votre lien avec vos amis</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
-                      <p>Ils s'inscrivent en utilisant votre code</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">3</div>
-                      <p>Après 3 amis invités, vous obtenez une récompense et le cycle recommence !</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <p className="text-sm text-yellow-800">
-                      <strong>Prochainement :</strong> Les récompenses incluront des mois d'abonnement gratuits, 
-                      des fonctionnalités premium et bien plus encore !
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
 
           {/* Onglet Sécurité */}
           <TabsContent value="security" className="space-y-6">
